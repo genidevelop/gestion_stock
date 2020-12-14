@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="articleDao"
+		class="com.genidev.stockmvc.dao.impl.ArticleDaoImpl" />
+	<bean id="articleService"
+		class="com.genidev.stockmvc.services.impl.ArticleServiceImpl">
+		<property name="dao" ref="articleDao"></property>
+	</bean>
+
+	<bean id="categoryDao"
+		class="com.genidev.stockmvc.dao.impl.CategoryDaoImpl" />
+	<bean id="categoryService"
+		class="com.genidev.stockmvc.services.impl.CategoryServiceImpl">
+		<property name="dao" ref="categoryDao"></property>
+	</bean>
+
+	<bean id="clientDao"
+		class="com.genidev.stockmvc.dao.impl.ClientDaoImpl" />
+	<bean id="clientService"
+		class="com.genidev.stockmvc.services.impl.ClientServiceImpl">
+		<property name="dao" ref="clientDao"></property>
+	</bean>
+
+	<bean id="commandeClientDao"
+		class="com.genidev.stockmvc.dao.impl.CommandeClientDaoImpl" />
+	<bean id="commandeClientService"
+		class="com.genidev.stockmvc.services.impl.CommandeClientServiceImpl">
+		<property name="dao" ref="commandeClientDao"></property>
+	</bean>
+	<bean id="commandeFournisseurDao"
+		class="com.genidev.stockmvc.dao.impl.CommandeFournisseurDaoImpl" />
+	<bean id="commandeFournisseurService"
+		class="com.genidev.stockmvc.services.impl.CommandeFournisseurServiceImpl">
+		<property name="dao" ref="commandeFournisseurDao"></property>
+	</bean>
+
+	<bean id="fournisseurDao"
+		class="com.genidev.stockmvc.dao.impl.FournisseurDaoImpl" />
+	<bean id="fournisseurService"
+		class="com.genidev.stockmvc.services.impl.FournisseurServiceImpl">
+		<property name="dao" ref="fournisseurDao"></property>
+	</bean>
+	<bean id="ligneCdeClientDao"
+		class="com.genidev.stockmvc.dao.impl.LigneCdeClientDaoImpl" />
+	<bean id="ligneCdeClientService"
+		class="com.genidev.stockmvc.services.impl.LigneCdeClientServiceImpl">
+		<property name="dao" ref="ligneCdeClientDao"></property>
+	</bean>
+
+	<bean id="ligneCdeFournisseurDao"
+		class="com.genidev.stockmvc.dao.impl.LigneCdeFournisseurDaoImpl" />
+	<bean id="ligneCdeFournisseurService"
+		class="com.genidev.stockmvc.services.impl.LigneCdeFournisseurServiceImpl">
+		<property name="dao" ref="ligneCdeFournisseurDao"></property>
+	</bean>
+	<bean id="ligneVenteDao"
+		class="com.genidev.stockmvc.dao.impl.LigneVenteDaoImpl" />
+	<bean id="ligneVenteService"
+		class="com.genidev.stockmvc.services.impl.LigneVenteServiceImpl">
+		<property name="dao" ref="ligneVenteDao"></property>
+	</bean>
+
+	<bean id="mvtStkDao"
+		class="com.genidev.stockmvc.dao.impl.MvtStkDaoImpl" />
+	<bean id="mvtStkService"
+		class="com.genidev.stockmvc.services.impl.MvtStkServiceImpl">
+		<property name="dao" ref="mvtStkDao"></property>
+	</bean>
+	<bean id="utilisateurDao"
+		class="com.genidev.stockmvc.dao.impl.UtilisateurDaoImpl" />
+	<bean id="utilisateurService"
+		class="com.genidev.stockmvc.services.impl.UtilisateurServiceImpl">
+		<property name="dao" ref="utilisateurDao"></property>
+	</bean>
+
+	<bean id="venteDao"
+		class="com.genidev.stockmvc.dao.impl.VenteDaoImpl" />
+	<bean id="venteService"
+		class="com.genidev.stockmvc.services.impl.VenteServiceImpl">
+		<property name="dao" ref="venteDao"></property>
+	</bean>
+</beans>
